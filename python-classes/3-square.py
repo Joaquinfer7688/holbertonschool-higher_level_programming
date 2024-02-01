@@ -15,8 +15,9 @@ class Square:
             raise TypeError("size must be ain integer")
         elif size < 0:
             raise ValueError("size must be a >= 0")
+
     def area(self):
         """
         This public instance method calculate the square area
         """
-        return self.__size ** 2
+        return (self.__size ** 2)
