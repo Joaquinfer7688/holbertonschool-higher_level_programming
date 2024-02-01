@@ -19,4 +19,4 @@ class Square:
         """
         This public instance method calculate the square area
         """
-        return self.__size **
+        return self.__size ** 2
