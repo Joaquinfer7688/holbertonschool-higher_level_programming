@@ -13,10 +13,18 @@ class Square:
 
     @property
     def size(self):
+        """
+        get size of a size the square
+        """
+
         return self.__size
 
     @size.setter
     def size(self, value):
+        """
+        sets the size of a side the square
+        """
+
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -24,9 +32,17 @@ class Square:
         self.__size = value
 
     def area(self):
+        """
+        This a public instance method that calculate area of the square
+        """
+
         return self.__size ** 2
 
     def my_print(self):
+        """
+        This is a public instance method that print "#"
+        """
+
         for i in range(self.__size):
             for a in range(self.__size):
                 print("#", end="")
