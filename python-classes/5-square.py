@@ -44,10 +44,9 @@ class Square:
         This is a public instance method that print "#"
         """
 
+        if self.__size == 0:
+            print()
         for i in range(self.__size):
             for a in range(self.__size):
                 print("#", end="")
-            print()
-
-        elif self.__size == 0:
             print()
