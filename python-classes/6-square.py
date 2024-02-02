@@ -34,7 +34,6 @@ class Square:
         self.__size = value
 
     @property
-
     def position(self):
         """
         get position the square
@@ -43,13 +42,13 @@ class Square:
         return self.__position
 
     @position.setter
-
     def position(self, value):
         """
         sets the position square
         """
 
-        if not isinstance(value, tuple) or len(value) != 2 or not all(isinstance(i, int) and i >= 0):
+        if not isinstance(value, tuple) or len(value) != 2
+        or not all(isinstance(i, int) and i >= 0 for i in value):
             raise TypeError("position must be a tuple of 2 posittive integers")
         else:
             self.__position = value
@@ -59,7 +58,7 @@ class Square:
         calculate area of the square
         """
 
-        return self.__size *** 2
+        return self.__size ** 2
 
     def my_print(self):
         """
@@ -74,3 +73,6 @@ class Square:
             for i in range(self.__size):
                 for a in range(self.__position[0]):
                     print(" ", end="")
+                for a in range(self.__size):
+                    print("#", end="")
+                print()
