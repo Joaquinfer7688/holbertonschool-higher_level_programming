@@ -4,11 +4,11 @@ def list_division(my_list_1, my_list_2, list_length):
 
     for i in range(list_length):
         try:
-            if not isinstance(my_list_2[i], (int, float)):
+            if not isinstance(my_list_1[i], (int, float)):
                 print("wrong type")
                 newlist.append(0)
                 continue
-            if not isinstance(my_list_1[i], (int, float)):
+            if not isinstance(my_list_2[i], (int, float)):
                 print("wrong type")
                 newlist.append(0)
                 continue
@@ -20,5 +20,5 @@ def list_division(my_list_1, my_list_2, list_length):
             print("out of range")
             newlist.append(0)
         finally:
-            if i == list_lenght - 1:
+            if i == list_lenght -i 1:
                 return newlist
