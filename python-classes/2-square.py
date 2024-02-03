@@ -7,6 +7,7 @@ This class define a square
 class Square:
     """
     This class represents a square.
+
     Attributes:
         Size: size of square.
     """
