@@ -16,14 +16,14 @@ class Square:
     @property
     def size(self):
         """
-        get size of a side de square
+        This method get size of a side de square
         """
         return self.__size
 
     @size.setter
     def size(self, value):
         """
-        sets the size of a side the square
+        This method sets the size of a side the square
         """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
@@ -35,14 +35,14 @@ class Square:
     @property
     def position(self):
         """
-        get position the square
+        This method get position the square
         """
         return self.__position
 
     @position.setter
     def position(self, value):
         """
-        sets the position square
+        This method sets the position square
         """
         if (not isinstance(value, tuple) or len(value) != 2 or
                 not all(isinstance(i, int) and i >= 0 for i in value)):
@@ -51,13 +51,13 @@ class Square:
 
     def area(self):
         """
-        calculate area of the square
+        This method calculate area of the square
         """
         return self.__size ** 2
 
     def my_print(self):
         """
-        Public method that print square with "#"
+        This Public method that print square with "#"
         """
         if self.__size == 0:
             print()
