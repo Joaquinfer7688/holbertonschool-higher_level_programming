@@ -4,7 +4,7 @@ This module contains a rectangle
 """
 
 
-def Rectangle:
+class Rectangle:
     """
     This class define a rectangle
     """
