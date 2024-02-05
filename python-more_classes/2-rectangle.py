@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-This module contains a rectangule
+This module contains a rectangle
 """
 
 
-class rectangule:
+class Rectangle:
     """
-    this class define a rectangule
+    this class define a rectangle
     """
     def __init__(self, width=0, height=0):
         self.width = width
@@ -40,7 +40,7 @@ class rectangule:
         return self.__width * self.__height
 
     def perimeter(self):
-        if self__width == 0 or self__height == 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
 
         return (self.__width * 2) + (self.__height * 2)
