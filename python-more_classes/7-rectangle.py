@@ -53,7 +53,7 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return ""
         else:
-            rectangle_str = (str(self.print_symbol) * self.width + "\n" * self.height)
+            rectangle_str = (str(self.print_symbol) * self.width + "\n") * self.height
         return rectangle_str[:-1]
 
     def __repr__(self):
