@@ -58,7 +58,7 @@ class Rectangle:
         print("Bye rectangle...")
 
 class Newclass:
-    Newclass.number_of_instances = 0
+    number_of_instances = 0
 
     def __init__(self):
         Newclass.number_of_instances += 1
