@@ -62,6 +62,8 @@ class Newclass:
     number_of_instances = 0
 
     def __init__(self):
+        self.width = width
+        self.height = height
         Newclass.number_of_instances += 1
 
     def __del__(self):
