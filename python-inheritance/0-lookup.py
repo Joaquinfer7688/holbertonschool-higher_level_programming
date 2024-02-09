@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This a module define a function
+This a module define a function return attributes and methods
 """
 
 
