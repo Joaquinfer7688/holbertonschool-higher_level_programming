@@ -4,7 +4,7 @@ This module define class MyList.
 """
 
 
-Class MyList(list):
+class MyList(list):
     """
     Class that inherits from list.
     """
@@ -13,4 +13,4 @@ Class MyList(list):
         This public instance method that print the list.
         """
         sorted_list = sorted(self)
-        print(sorted_list)
+        print(sorted(self))
