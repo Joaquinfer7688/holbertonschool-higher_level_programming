@@ -1,0 +1,34 @@
+import unittest
+
+class TestBaseGeometry(unittest.TestCase):
+    def test_area_not_implemented(self):
+        bg = BaseGeometry()
+
+        with self.assertRaises(Exception) as context:
+            bg.area()
+
+        self.assertIn("area() is not implemented", str(context.exception))
+
+    def test_integer_validator_valid_value(self):
+        bg = BaseGeometry()
+
+        try:
+            bg.integer_validator("test_value", 10)
+        except ValueError:
+            self.fail("integer_validator raised an unexpected ValueError")
+
+    def test_integer_validator_invalid_value(self):
+        bg = BaseGeometry()
+
+        with self.assertRaises(TypeError) as context:
+            bg.integer_validator("test_value", "invalid")
+
+        self.assertIn("must be an integer", str(context.exception))
+
+        with self.assertRaises(TypeError) as context:
+            bg.integer_validator("test_value", 0)
+
+        self.assertIn("must be greater than 0", str(context.exception))
+
+if __name__ == "__main__":
+    unittest.main()
