@@ -25,7 +25,7 @@ class Student:
             return self.__dict__
         else:
             result_json = {}
-            for attr in attrs:
-                if hasattr(self, attr):
-                    result_json[attr] = getattr(self, attr)
+            for attribute in attrs:
+                if hasattr(self, attribute):
+                    result_json[attribute] = getattr(self, attribute)
             return result_json
