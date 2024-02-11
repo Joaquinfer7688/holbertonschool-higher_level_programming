@@ -5,6 +5,9 @@ This module create a class based on BaseGeometry.
 
 
 class BaseGeometry:
+    """
+    this a class that represent a base geometry.
+    """
     def area(self):
         """
         This a public instance method that raises
