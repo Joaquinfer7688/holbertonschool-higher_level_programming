@@ -1,34 +1,26 @@
 import unittest
+from base_geometry import BaseGeometry
 
 class TestBaseGeometry(unittest.TestCase):
-    def test_area_not_implemented(self):
+    def test_area(self):
         bg = BaseGeometry()
-
         with self.assertRaises(Exception) as context:
             bg.area()
+        self.assertEqual(str(context.exception), "area() is not implemented")
 
-        self.assertIn("area() is not implemented", str(context.exception))
-
-    def test_integer_validator_valid_value(self):
+    def test_integer_validator_valid_input(self):
         bg = BaseGeometry()
+        self.assertIsNone(bg.integer_validator("test", 5))
 
-        try:
-            bg.integer_validator("test_value", 10)
-        except ValueError:
-            self.fail("integer_validator raised an unexpected ValueError")
-
-    def test_integer_validator_invalid_value(self):
+    def test_integer_validator_invalid_input(self):
         bg = BaseGeometry()
+        with self.assertRaises(TypeError) as context:
+            bg.integer_validator("test", "string")
+        self.assertEqual(str(context.exception), "f{name} must be an integer")
 
         with self.assertRaises(TypeError) as context:
-            bg.integer_validator("test_value", "invalid")
-
-        self.assertIn("must be an integer", str(context.exception))
-
-        with self.assertRaises(TypeError) as context:
-            bg.integer_validator("test_value", 0)
-
-        self.assertIn("must be greater than 0", str(context.exception))
+            bg.integer_validator("test", 0)
+        self.assertEqual(str(context.exception), "f{name} must be greater than 0")
 
 if __name__ == "__main__":
     unittest.main()
