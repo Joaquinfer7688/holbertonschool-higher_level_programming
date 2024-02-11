@@ -10,7 +10,7 @@ def pascal_triangle(n):
     integers representing the Pascal’s triangle of n.
     """
     if n <= 0:
-        return []
+        return ""
 
      triangle = [[1]]
     for current_row in range(1, n):
