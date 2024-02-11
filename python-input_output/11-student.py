@@ -34,5 +34,5 @@ class Student:
         """
         public method that replaces all attributes of the Student instance.
         """
-        for key, value in json.items():
-            setattr(self, key, value)
+        for j in json:
+            setattr(self, j, json[j])
