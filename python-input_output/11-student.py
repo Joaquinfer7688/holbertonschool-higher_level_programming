@@ -34,6 +34,5 @@ class Student:
         """
         public method that replaces all attributes of the Student instance.
         """
-        for i in json:
-            if i in self.__dict__:
-                self.__dict__[i] = json[i]
+        for attr, value in json.items():
+            setattr(self, attr, value)
