@@ -5,6 +5,10 @@ This module create a class based on BaseGeometry.
 
 
 class BaseGeometry:
+    """
+    this class represent a base geometry.
+    """
+
     def area(self):
         """
         This a public instance method that raises
@@ -39,7 +43,7 @@ class Rectangle(BaseGeometry):
         self.__height = height
 
     def area(self):
-        return self.__widht * self.__height
+        return self.__width * self.__height
 
     def __str__(self):
         return f"[Rectangle] {self.__width}/{self.__height}"
