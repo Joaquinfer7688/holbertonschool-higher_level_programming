@@ -1,10 +1,14 @@
 #!/usr/bin/python3
 """
-Thid method define BaseGeometry.
+This method define BaseGeometry.
 """
 
 
 class BaseGeometry:
+    """
+    class that define base geometry.
+    """
+
     def area(self):
         """
         This a public instance method that raises
