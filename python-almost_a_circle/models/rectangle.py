@@ -84,7 +84,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """
-        method so that it returns
+        method so that it returns a string.
         """
         return "[Rectangle] ({}) {}/{} - {}/{}".format
         (self.id, self.x, self.y, self.width, self.height)
