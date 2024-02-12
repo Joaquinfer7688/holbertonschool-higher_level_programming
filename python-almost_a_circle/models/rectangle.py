@@ -86,5 +86,5 @@ class Rectangle(Base):
         """
         method so that it returns
         """
-        return f"[Rectangle] () {}/{} - {}/{}".format
-        (self.width, self.height, self.id, self.x, self.y)
+        return f"[Rectangle] () {}/{} - {}/{}"
+        .format(self.width, self.height, self.id, self.x, self.y)
