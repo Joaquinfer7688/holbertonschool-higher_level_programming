@@ -36,7 +36,6 @@ class Rectangle(BaseGeometry):
         """
         function that initialize a Rectangle with height and width.
         """
-        super().__init__()
         self.integer_validator("width", width)
         self.__width = width
 
