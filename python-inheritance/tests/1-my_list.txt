@@ -1,14 +1,60 @@
-import unittest
+# 1-my_list.txt
+=======================
+How to Use 1-my_list.py
+=======================
+
+This module defines a class ``MyList`` that inherits from ``list``.
+
+Instantiation
+=============
+
 >>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
 
-class TestMyList(unittest.TestCase):
-    def test_print_sorted(self):
-        my_list = MyList([3, 1, 2])
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
 
-        # Llama al método print_sorted()
-        my_list.print_sorted()
+>>> print(my_list)
+[1, 4, 2, 3, 5]
 
-        self.assertEqual(str(my_list), '[1, 2, 3]')
+>>> del my_list
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
 
-if __name__ == '__main__':
-    unittest.main()
+>>> my_list.append(-1)
+>>> my_list.append(-4)
+>>> my_list.append(-2)
+>>> my_list.append(-3)
+>>> my_list.append(-5)
+>>> my_list.print_sorted()
+[-5, -4, -3, -2, -1]
+
+>>> my_list.append(3)
+>>> my_list.append(0)
+>>> my_list.append(-6)
+>>> my_list.print_sorted()
+[-6, -5, -4, -3, -2, -1, 0, 3]
+
+>>> del my_list
+>>> my_list = MyList()
+>>> my_list.append(0)
+>>> my_list.append(0)
+>>> my_list.append(0)
+>>> my_list.print_sorted()
+[0, 0, 0]
+
+>>> del my_list
+>>> my_list = MyList()
+>>> my_list.append(-1)
+>>> my_list.append(0)
+>>> my_list.append(2)
+>>> my_list.print_sorted()
+[-1, 0, 2]
