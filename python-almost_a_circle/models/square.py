@@ -36,7 +36,5 @@ class Square(Rectangle):
         """
         function that define a size.
         """
-        if value < 0:
-            raise ValueError("size must be a non-negative value")
         self.width = value
         self.height = value
