@@ -19,4 +19,7 @@ class Square(Rectangle):
         Rectangle.__init__(size, size, x, y, id)
 
     def __str__(self):
+        """
+        return a string representation of square.
+        """
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
