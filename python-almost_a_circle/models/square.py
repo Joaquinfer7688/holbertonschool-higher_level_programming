@@ -23,3 +23,20 @@ class Square(Rectangle):
         """
         return ("[Square] ({}) {}/{} - {}"
                 .format(self.id, self.x, self.y, self.width))
+
+    @property
+    def size(self):
+        """
+        class Square by adding the public getter and setter size.
+        """
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """
+        function that define a size.
+        """
+        if value < 0:
+            raise ValueError("size must be a non-negative value")
+        self.width = value
+        self.height = value
