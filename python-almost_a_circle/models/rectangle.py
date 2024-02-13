@@ -103,5 +103,5 @@ class Rectangle(Base):
             self.height = args[2]
         if len(args) >= 4:
             self.x = args[3]
-        if len(args) >= 5
+        if len(args) >= 5:
             self.y = args[4]
