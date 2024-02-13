@@ -16,6 +16,7 @@ class Rectangle(Base):
         class constructor that initialize.
         """
         super().__init__(id)
+        self.id = id
         self.width = width
         self.height = height
         self.x = x
@@ -95,6 +96,8 @@ class Rectangle(Base):
         """
         adding the public method that assigns an argument to each attribute.
         """
+        if len(args) >= 1:
+            self.id = args[0]
         if len(args) >= 2:
             self.width = args[1]
         if len(args) >= 3:
