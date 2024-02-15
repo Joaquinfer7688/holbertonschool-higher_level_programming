@@ -4,6 +4,7 @@ define a class Base.
 """
 
 import json
+import os
 
 
 class Base:
