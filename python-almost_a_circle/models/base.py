@@ -82,10 +82,11 @@ class Base:
 
         if not path.exists(filename):
             return []
+
         with open(filename, "r") as file:
             objs = cls.from_json_string(file.read())
-            instances = []
+        instances = []
 
-            for element in objs:
-                instances.append(cls.create(**element))
-            return instances
+        for element in objs:
+            instances.append(cls.create(**element))
+        return instances
