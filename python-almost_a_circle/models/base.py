@@ -3,8 +3,9 @@
 define a class Base.
 """
 
+
 import json
-import os
+from os import path
 
 
 class Base:
