@@ -59,3 +59,15 @@ class Base:
             dictionary = [obj.to_dictionary() for obj in list_objs]
         with open(filename, "w") as file:
             file.write(cls.to_json_string(dictionary))
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        class method that return an instance with all atributes already set.
+        """
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
+        else:
+            dummy = cls(1)
+        cls.update(dummy, **dictionary)
+        return dummy
