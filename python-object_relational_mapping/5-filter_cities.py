@@ -21,5 +21,6 @@ if __name__ == '__main__':
                 JOIN states ON cities.state_id = states.id \
                 WHERE states.name = %s LIKE BINARY ORDER BY id ASC", (state_name,))
     rows = cur.fetchall()
-    for row in rows:
-        print(row)
+
+    if rows is not None:
+        print(", ".join([row[1] for row in rows]))
