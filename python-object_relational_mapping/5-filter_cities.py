@@ -19,8 +19,8 @@ if __name__ == '__main__':
     cur = db.cursor()
     cur.execute("SELECT cities.id, cities.name FROM cities \
                 JOIN states ON cities.state_id = states.id \
-                WHERE states.name = %s LIKE BINARY ORDER BY id ASC", (state_name,))
+                WHERE states.name = %s ORDER BY id ASC", (state_name,))
     rows = cur.fetchall()
 
-    if rows is not None:
+    if rows:
         print(", ".join([row[1] for row in rows]))
